@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Memory</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="https://www.leagueoflegends.com/static/hero-c35bd03ceaa5f919e98b20c905044a3d.webm" type="video/webm">
+    </video>
+
+    <main>
+        <form class="login-form">
+            <div class="login__header">
+                <h1>League of Memory</h1>
+            </div>
+            <input type="text" placeholder="Name" class="login__input">
+            <button type="submit" class="login__button" disabled>Play</button>
+        </form>
+        <div class="grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
