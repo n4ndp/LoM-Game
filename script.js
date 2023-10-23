@@ -41,7 +41,7 @@ const checkMatch = () => {
         second_card = null;
 
         matches++;
-        if (matches === 9) {
+        if (matches === size) {
             clearInterval(this.loop);
         }
     } else {
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         main.insertBefore(header, main.firstChild);
 
         // Start game with 9 or 12 pairs of cards, depending if is computer or mobile
-        const size = window.innerWidth > 920 ? 12 : 6;
+        var size = window.innerWidth > 920 ? 12 : 6;
         startGame(size);
 
     }); // Save player name to localStorage and redirect to game.html
