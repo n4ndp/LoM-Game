@@ -29,6 +29,7 @@ const champs = [
 let first_card = null;
 let second_card = null;
 let matches = 0;
+let size = 0;
 
 const checkMatch = () => {
     const first_champ = first_card.querySelector(".front").style.backgroundImage;
@@ -41,8 +42,13 @@ const checkMatch = () => {
         second_card = null;
 
         matches++;
-        if (matches === size) {
+        console.log("current matches: " + matches + " of " + size + "");
+        if (matches == size) {
+            console.log("You win!");
             clearInterval(this.loop);
+            setTimeout(() => {
+                alert("You win!");
+            }, 500);
         }
     } else {
         setTimeout(() => {
@@ -161,7 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
         main.insertBefore(header, main.firstChild);
 
         // Start game with 9 or 12 pairs of cards, depending if is computer or mobile
-        var size = window.innerWidth > 920 ? 12 : 6;
+        size = window.innerWidth > 920 ? 12 : 6;
+        console.log("size: " + size);
         startGame(size);
 
     }); // Save player name to localStorage and redirect to game.html
